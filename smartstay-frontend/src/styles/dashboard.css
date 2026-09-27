@@ -1,0 +1,124 @@
+.topbar {
+  background: var(--color-gold-soft);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.topbar-wordmark {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.topbar .btn-outline {
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+.topbar .btn-outline:hover {
+  border-color: var(--color-ink);
+}
+
+.tab-row {
+  display: flex;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-5);
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 12px 4px;
+  margin-right: 24px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-gold);
+}
+
+.rec-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.rec-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+}
+
+.score-badge {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  background: var(--color-ink);
+  padding: 6px 16px;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+}
+
+.attr-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attr-bar-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.attr-bar-label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.attr-bar-track {
+  height: 6px;
+  background: var(--color-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.attr-bar-fill {
+  height: 100%;
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+.explain-panel {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.explain-list {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.request-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

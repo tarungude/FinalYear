@@ -1,0 +1,133 @@
+.chat-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 520px;
+  background: var(--color-surface);
+}
+
+.chat-contact-list {
+  border-right: 1px solid var(--color-border);
+  overflow-y: auto;
+}
+
+.chat-contact-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.chat-contact-row:hover,
+.chat-contact-row.active {
+  background: var(--color-bg);
+}
+
+.chat-preview {
+  font-size: 0.8rem;
+  max-width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unread-dot {
+  background: var(--color-gold);
+  color: var(--color-ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chat-thread-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-empty-thread {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-thread {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-thread-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-bubble-row {
+  display: flex;
+}
+
+.chat-bubble-row.mine {
+  justify-content: flex-end;
+}
+
+.chat-bubble-row.theirs {
+  justify-content: flex-start;
+}
+
+.chat-bubble {
+  max-width: 70%;
+  padding: 9px 14px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.chat-bubble-row.mine .chat-bubble {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble-row.theirs .chat-bubble {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 10px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.chat-input-row input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
