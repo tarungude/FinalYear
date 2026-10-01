@@ -61,7 +61,7 @@ Keep "conflictAreas" and "tips" to at most 3 items each. If the score is high (8
  */
 async function generateMatchExplanation({ studentAName, studentBName, overallScore, breakdown }) {
   const client = getClient();
-  const model = client.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = client.getGenerativeModel({ model: "gemini-3.5-flash-lite" });
 
   const prompt = buildPrompt({ studentAName, studentBName, overallScore, breakdown });
 
@@ -116,7 +116,7 @@ Ground rules:
 async function getChatbotReply(history, userMessage, userContext = {}) {
   const client = getClient();
   const model = client.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-3.5-flash-lite",
     systemInstruction: CHATBOT_SYSTEM_INSTRUCTION,
   });
 
